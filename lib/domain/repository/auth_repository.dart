@@ -7,7 +7,7 @@ class AuthRepositoryMock implements AuthRepository {
 
   @override
   Future<String> login(String email, password) async {
-    if (clients[email] == password) {
+    if (clients[email.toLowerCase()] == password) {
       return DateTime.now().millisecondsSinceEpoch.toString();
     } else {
       throw Exception('Неправильный логин или пароль');

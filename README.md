@@ -1,3 +1,9 @@
+login admin@ya.ru
+pass Pass1234
+
+login user@ya.ru
+pass Pass4321
+
 # test_tokeon
 
 A new Flutter project.
