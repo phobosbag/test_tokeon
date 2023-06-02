@@ -107,7 +107,8 @@ class AuthScreenState extends State<AuthScreen> {
                                 ),
                                 ElevatedButton(
                                     onPressed: () {
-                                      if (_formKey.currentState!.validate() && !state.isLoading) {
+                                      ScaffoldMessenger.of(context).clearMaterialBanners();
+                                      if (_formKey.currentState!.validate()) {
                                         authBloc.login(controllerEmail.text, controllerPassword.text);
                                       }
                                     },
